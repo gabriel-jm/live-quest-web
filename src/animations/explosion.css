@@ -1,0 +1,42 @@
+@keyframes anim {
+  0% {
+    background-color: var(--start-color);
+  }
+  100% {
+    background-color: var(--end-color);
+    translate: 200px;
+    scale: 1.5;
+  }
+}
+
+.wave {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: blue;
+  background-color: transparent;
+  box-shadow: 0 0 3px 1px transparent;
+  animation: wave-grow 400ms ease-in forwards;
+  animation-delay: 500ms;
+  animation-play-state: paused;
+}
+
+@keyframes wave-grow {
+  0% {
+    scale: 0;
+    box-shadow: 0 0 3px 2px transparent;
+    box-shadow: inset 0 0 5px 1px #eee;
+  }
+  35% {
+    box-shadow: inset 0 0 5px 1px #eeea;
+  }
+  70% {
+    opacity: 1;
+    box-shadow: inset 0 0 5px 1px #eee7;
+  }
+  100% {
+    scale: 1;
+    box-shadow: inset 0 0 6px 1px #afdaeb33;
+    opacity: 0;
+  }
+}
